@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Quiz App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white h-screen flex items-center justify-center">
+  <!-- Form Page -->
+  <div id="formPage" class="w-full max-w-lg p-8 bg-gray-800 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-4 text-center">Welcome to the JavaScript Quiz</h1>
+    <div class="space-y-4">
+      <input id="name" type="text" placeholder="Enter your Name" class="w-full p-3 rounded-md bg-gray-700 text-white">
+      <input id="email" type="email" placeholder="Enter your Email" class="w-full p-3 rounded-md bg-gray-700 text-white">
+      <input id="rollno" type="text" placeholder="Enter your Roll Number" class="w-full p-3 rounded-md bg-gray-700 text-white">
+      <input id="institute" type="text" placeholder="Enter your Institute Name" class="w-full p-3 rounded-md bg-gray-700 text-white">
+    </div>
+    <button onclick="startQuiz()" class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-3 rounded-lg mt-6">
+      Start Quiz
+    </button>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quizPage" class="hidden w-full max-w-3xl p-8 bg-gray-800 rounded-lg shadow-lg">
+    <div class="mb-6">
+      <h2 class="text-xl font-bold">Participant Info</h2>
+      <p id="userInfo" class="text-sm text-gray-300"></p>
+    </div>
+    <div>
+      <p id="ques" class="text-lg font-semibold mb-4"></p>
+      <ul id="quesOptions" class="space-y-3"></ul>
+    </div>
+    <button onclick="nextQues()" class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg">
+      Next
+    </button>
+  </div>
+
+  <!-- Result Page -->
+  <!-- Result Page -->
+<div id="resultPage" class="hidden w-full max-w-lg p-8 bg-gray-800 rounded-lg shadow-lg text-center">
+    <h2 class="text-2xl font-bold mb-6">Your Result</h2>
+    <div class="w-full bg-gray-700 rounded-lg h-6 relative overflow-hidden">
+      <div
+        id="progressBar"
+        class="bg-green-500 h-6 rounded-lg absolute left-0 top-0 transition-all duration-500"
+        style="width: 0%;">
+      </div>
+    </div>
+    <p id="progressText" class="mt-4 text-lg font-semibold">0%</p>
+    <p id="resultMessage" class="mt-4 text-lg font-semibold"></p>
+  </div>
+  
+  
+</body>
+<script src="quiz.js"></script>
+</html>
